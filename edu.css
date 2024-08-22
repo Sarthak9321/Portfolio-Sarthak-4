@@ -1,0 +1,132 @@
+/* Variables */
+:root {
+    --first-color: #2f2f2f;
+    --second-color: #444444;
+    --highlight-color: #ffffff;
+    --black-color: #000;
+    --white-color: #FFF;
+    --body-font: 'Poppins', sans-serif;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Base styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-size: var(--normal-font-size);
+}
+
+a {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+.l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--black-color);
+    box-shadow: var(--box-shadow);
+}
+
+.nav {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    padding: 0 1rem;
+}
+
+.nav__menu {
+    display: flex;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+    margin-left: 2rem;
+}
+
+.nav__logo {
+    font-size: var(--normal-font-size);
+}
+
+/* Main content */
+.l-main {
+    padding: 4rem 1rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Content box */
+.content-box {
+    padding: 2rem;
+    background-color: var(--first-color);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Arial', sans-serif; /* Change font family */
+    font-style: italic; /* Italicize the text */
+    font-weight: 400; /* Set font weight */
+}
+
+.content-title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+    font-family: 'Arial', sans-serif; /* Change font family */
+    font-style: italic; /* Italicize the text */
+    font-weight: 700; /* Set font weight */
+}
+
+.content-list {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    font-style: italic; 
+    font-weight: 400; 
+    line-height: 1.5;
+}
+
+.content-list li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* Responsive design */
+@media screen and (min-width: 768px) {
+    .l-main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .l-main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
